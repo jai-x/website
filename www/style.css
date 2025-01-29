@@ -15,11 +15,50 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 1em;
   align-items: center;
   justify-content: center;
 }
 
-.home-name {
+.home h1 {
   font-size: 26px;
+  margin: 0;
+}
+
+.resume {
+  width: 85ch;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.resume h3, .resume hr {
+  margin: 0;
+}
+
+.resume ul {
+  margin: 0;
+  padding-left: 2ch;
+}
+
+.resume p {
+  margin-bottom: 0;
+  margin-top: 0.25em;
+}
+
+.resume section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.resume-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
