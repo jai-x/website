@@ -1,0 +1,119 @@
+info:
+  name: 'Jai Sharma'
+  role: 'Software Developer'
+  website: 'jaisharma.co.uk'
+  email: 'contact@jaisharma.co.uk'
+  links:
+    - name: 'Blog'
+      link: 'https://jai.moe'
+    - name: 'GitHub'
+      link: 'https://github.com/jai-x'
+    - name: 'Bluesky'
+      link: 'https://bsky.app/profile/jai.moe'
+
+resume:
+  experience:
+    - company: 'Zen Educate'
+      position: 'Software Developer'
+      start_date: 'Jan 2022'
+      end_date: 'Present'
+      location: 'London, UK / Remote'
+      details:
+        - 'TODO'
+
+    - company: 'Compare the Market'
+      position: 'Software Engineer'
+      start_date: 'May 2021'
+      end_date: 'October 2021'
+      location: 'London, UK / Remote'
+      details:
+        - 'Worked as part of team to deliver features to a Phoenix Elixir API service'
+        - 'Responsible for gathering requirements and making relevant changes to internal
+           web dashboards written in Elm'
+        - 'Worked on adjusting AWS Cloudwatch metrics using Terraform for more accurate
+           incident alerting'
+
+    - company: 'Babylon Health'
+      position: 'Software Engineer'
+      start_date: 'July 2019'
+      end_date: 'April 2021'
+      location: 'London, UK / Remote'
+      details:
+        - 'Worked as part of a team responsible for long term maintenance of multiple
+           Ruby on Rails web API services'
+        - 'Provided in-hours support for multiple Ruby web services, fixing major incidents
+           and carrying out service remediation'
+        - 'Led the migration of an asynchronous job queue system to Sidekiq within a
+           monolithic web service with minimal downtime'
+        - 'Implemented work to enable the migration of functionality from a monolithic web
+           API service to multiple web API microservices'
+        - 'Tasked with documenting and auditing existing web services to ensure they meet
+           both internal and external compliance standards'
+
+    - company: 'GoCardless'
+      position: 'Software Development Engineer Intern'
+      start_date: 'July 2018'
+      end_date: 'April 2019'
+      location: 'London, UK'
+      details:
+        - 'Responsible for implementing and A/B testing new user flows in a full stack
+           Ruby on Rails web service'
+        - 'Maintained and delivered web frontend components in a React to allow greater
+           customisability of merchant customer pages, according to design specifications'
+        - 'Worked within a team to plan and implement better visibility of deployment
+           metrics with internal company tooling, written in Go and Ruby'
+
+  education:
+    - institution: 'The University of Warwick'
+      qualification: 'BSc Computer Science (Course Incomplete)'
+      start_date: 'October 2014'
+      end_date: 'February 2017'
+      location: 'Coventry, UK'
+
+  projects:
+    - name: 'hues'
+      link: 'https://github.com/jai-x/hues'
+      summary: 'A 2D music and image visualiser implemented in C# and using the
+                osu!framework. Recreates functionality from the 0x40 Hues flash project and
+                implements a subset of the beatmap standard.'
+
+    - name: 'renderer'
+      link: 'https://github.com/jai-x/renderer'
+      summary: 'An experimental program to teach myself the basics of 3D rendering and
+                rasterisation. Based on the Tiny Renderer project but adapted and written in
+                standard C99.'
+
+    - name: 'wasd2021'
+      link: 'https://github.com/jai-x/wasd2021'
+      summary: 'Dynamic broadcast overlay project used for displaying information during a
+                charity speedrunning event. Provides runner information and run timing, as
+                well as music and real time donation tracking via integration with Spotify
+                and Tiltify. Written in Javascript using Node and Mithril.'
+
+  skills:
+    - key: 'Languages'
+      values:
+        - 'Ruby'
+        - 'Javascript'
+        - 'C#'
+        - 'C'
+        - 'Go'
+        - 'Elixir'
+
+    - key: 'Libraries & Frameworks'
+      values:
+        - 'Ruby on Rails'
+        - 'React'
+        - 'Mithril'
+        - 'osu!framework'
+        - 'SDL2'
+        - 'Node'
+
+    - key: 'Tooling'
+      values:
+        - 'Bash'
+        - 'Vim'
+        - 'Fish shell'
+        - 'Git'
+        - 'Docker'
+        - 'Terraform'
