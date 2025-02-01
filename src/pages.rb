@@ -101,11 +101,11 @@ class HomePage < ApplicationPage
     render PageLayout.new("Home | #{@data[:info][:name]}") do
       main(class: "home") do
         h1 { @data[:info][:name] }
+        a(href: "mailto:#{@data[:info][:email]}") { "Email" }
+        a(href: "/resume.html") { "Resume" }
         @data[:info][:links].each do |link|
           a(href: link[:link], target: "_blank") { link[:name] }
         end
-        a(href: "/resume.html") { "Resume" }
-        a(href: "mailto:#{@data[:info][:email]}") { "Email" }
       end
     end
   end
