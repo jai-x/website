@@ -13,7 +13,7 @@ module Components
         head do
           meta charset: "utf-8"
           meta name: "viewport", content: "width=device-width, initial-scale=1"
-          link rel: "stylesheet", href: "/style.css"
+          link rel: "stylesheet", href: "/static/style.css"
           title { @title }
         end
 

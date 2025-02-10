@@ -5,8 +5,9 @@ class Website
   YAML_FILE = ROOT.join("site.yml")
   WEB_ROOT = ROOT.join("www")
 
+  STATIC_DIR = ROOT.join("static")
   PAGES_FILE = ROOT.join("src", "pages.rb")
-  WATCHED_FILES = [YAML_FILE, PAGES_FILE]
+  WATCHED_FILES = [YAML_FILE, PAGES_FILE, STATIC_DIR]
 
   def serve
     puts "🚀 Starting server..."
@@ -25,12 +26,26 @@ class Website
 
   def generate
     reload
+    verify_web_root
+    copy_assets
+    generate_pages
+  end
 
+  private
+
+  def verify_web_root
     unless Dir.exist?(WEB_ROOT)
       Dir.mkdir(WEB_ROOT)
       puts "✅ Created directory #{WEB_ROOT}"
     end
+  end
 
+  def copy_assets
+    FileUtils.cp_r(STATIC_DIR, WEB_ROOT)
+    puts "✅ Copied #{STATIC_DIR} to #{WEB_ROOT}"
+  end
+
+  def generate_pages
     ApplicationPage.descendants.each do |page_class|
       page = page_class.new(@yaml)
       filepath = WEB_ROOT.join(page.filename)
