@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
-  deploy:
+  build_and_deploy:
     environment:
       name: 'github-pages'
       url: '${{ steps.deployment.outputs.page_url }}'
@@ -29,18 +29,19 @@ jobs:
       - name: 'Checkout'
         uses: 'actions/checkout@v3'
       # Setup Ruby
-      - name: 'Setup Ruby'
+      - name: 'Setup ruby'
         uses: 'ruby/setup-ruby@v1'
         with:
           ruby-version: ".tool-versions" # Use ruby version in `.tool-versions` file
           bundler-cache: true # Auto run `bundle install`
       # Generate website
-      - name: 'Generate Website'
+      - name: 'Generate website'
         run: './bin/run generate'
       # Upload only the ./www directory
-      - name: 'Upload artifact'
-        uses: 'actions/upload-pages-artifact@v1'
+      - name: 'Upload www artifact'
+        uses: 'actions/upload-pages-artifact@v3'
         with:
+          name: 'www ${{ github.sha }}'
           # Upload entire repository
           path: "./www"
       # Deploy the site
